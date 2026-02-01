@@ -1,12 +1,12 @@
 FROM node:18-alpine
 WORKDIR /app
 
-# Copy files from the current directory (where Jenkins put them)
+# package.json is in repo root (based on your screenshot)
 COPY package*.json ./
 RUN npm install
 
-# Copy everything else from the current directory
-COPY . .
+# copy only the app folder into /app
+COPY my-app/ ./
 
 EXPOSE 3000
 CMD ["node", "server.js"]
