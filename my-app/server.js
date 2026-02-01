@@ -11,13 +11,13 @@ app.get('/api/trigger-pipeline', (req, res) => {
             id: "BUILD-" + Math.floor(Math.random() * 10000),
             status: "Success",
             steps: [
-                "⬇️ Fetching source code from GitHub...",
-                "📦 Installing dependencies (npm install)...",
-                "🐳 Building Docker Image...",
-                "✅ Running Unit Tests (Pass)...",
-                "🚀 Deploying to Production Server..."
+                "⬇️ Fetching source code from GitHub. ..",
+                "📦 Installing dependencies (npm install). ..",
+                "🐳 Building Docker Image. ..",
+                "✅ Running Unit Tests (Pass). ..",
+                "🚀 Deploying to Production Server. .."
             ],
-            finalMessage: "Pipeline execution successful! App is live."
+            finalMessage: "Yahoo! Pipeline execution successful! My Website is live."
         });
     }, 1000);
 });
