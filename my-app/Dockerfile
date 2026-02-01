@@ -1,12 +1,12 @@
 FROM node:18-alpine
 WORKDIR /app
 
-# Point to the subfolder
-COPY my-app/package*.json ./
+# Copy from current directory (since we are already in my-app)
+COPY package*.json ./
 RUN npm install
 
-# Copy everything from the subfolder
-COPY my-app/ .
+# Copy everything else from current directory
+COPY . .
 
 EXPOSE 3000
 CMD ["node", "server.js"]
